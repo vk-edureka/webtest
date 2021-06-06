@@ -14,8 +14,15 @@ public class App
     {
     	
     	System.setProperty("webdriver.chrome.driver","C:\\Users\\Vivarsh\\Downloads\\chromedriver_91\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        //WebDriver driver = new ChromeDriver();
     	//driver.get("http://34.134.190.135:8004/index.php");
+	    
+	ChromeOptions chromeOptions = new ChromeOptions();
+	chromeOptions.addArguments("--headless");
+	chromeOptions.addArguments("--no-sandbox");
+	//chromeOptions.setExperimentalOption("useAutomationExtension", false);
+	WebDriver driver = new ChromeDriver(chromeOptions);
+	    
         driver.get("http://localhost:8082/addressbook/");
     	//System.out.println(driver.getTitle());
     	Thread.sleep(2000);
@@ -34,7 +41,7 @@ public class App
     			  //It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).";
     			   		  
     	  //System.out.println(exp);
-    	  System.out.println("-------------------------------------------------------------------------");
+    	  System.out.println("hello");
     	  //System.out.println(body);
     	  //if (Expected.equalsIgnoreCase(body))
           //{
