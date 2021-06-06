@@ -16,7 +16,7 @@ public class App
     	System.setProperty("webdriver.chrome.driver","C:\\Users\\Vivarsh\\Downloads\\chromedriver_91\\chromedriver.exe");
         //WebDriver driver = new ChromeDriver();
     	//driver.get("http://34.134.190.135:8004/index.php");
-	WebDriver driver = new ChromeDriver(chromeOptions);
+	WebDriver driver = new ChromeDriver();
 	    
         driver.get("http://localhost:8082/addressbook/");
     	//System.out.println(driver.getTitle());
