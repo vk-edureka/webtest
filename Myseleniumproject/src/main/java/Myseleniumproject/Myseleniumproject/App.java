@@ -16,11 +16,6 @@ public class App
     	System.setProperty("webdriver.chrome.driver","C:\\Users\\Vivarsh\\Downloads\\chromedriver_91\\chromedriver.exe");
         //WebDriver driver = new ChromeDriver();
     	//driver.get("http://34.134.190.135:8004/index.php");
-	    
-	ChromeOptions chromeOptions = new ChromeOptions();
-	chromeOptions.addArguments("--headless");
-	chromeOptions.addArguments("--no-sandbox");
-	//chromeOptions.setExperimentalOption("useAutomationExtension", false);
 	WebDriver driver = new ChromeDriver(chromeOptions);
 	    
         driver.get("http://localhost:8082/addressbook/");
@@ -55,12 +50,12 @@ public class App
     	 
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.findElement(By.className("v-button")).click();
-		driver.findElement(By.id("gwt-uid-5")).sendKeys("Vivarsh");
-		driver.findElement(By.id("gwt-uid-7")).sendKeys("Devops");
-		driver.findElement(By.id("gwt-uid-9")).sendKeys("123456789");
-		driver.findElement(By.id("gwt-uid-11")).sendKeys("abc@edureka.com");
-		driver.findElement(By.id("gwt-uid-13")).sendKeys("01/02/2020");
-		driver.findElement(By.className("v-button-primary")).click();
+	driver.findElement(By.className("v-button")).click();
+	driver.findElement(By.id("gwt-uid-5")).sendKeys("Vivarsh");
+	driver.findElement(By.id("gwt-uid-7")).sendKeys("Devops");
+	driver.findElement(By.id("gwt-uid-9")).sendKeys("123456789");
+	driver.findElement(By.id("gwt-uid-11")).sendKeys("abc@edureka.com");
+	driver.findElement(By.id("gwt-uid-13")).sendKeys("01/02/2020");
+	driver.findElement(By.className("v-button-primary")).click();
     }
 }
